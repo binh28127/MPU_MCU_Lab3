@@ -22,7 +22,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "global.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -96,6 +96,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  fsmTrafficRun();
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -197,19 +199,19 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, LED_RED_1_Pin|LED_YELLOW_1_Pin|LED_GREEN_1_Pin|LED_RED_2_Pin
-                          |LED_YELLOW_2_Pin|LED_GREEN_2_Pin|EN0_Pin|EN1_Pin
+  HAL_GPIO_WritePin(GPIOA, LED_RED_1_Pin|LED_AMBER_1_Pin|LED_GREEN_1_Pin|LED_RED_2_Pin
+                          |LED_AMBER_2_Pin|LED_GREEN_2_Pin|EN0_Pin|EN1_Pin
                           |EN2_Pin|EN3_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3
                           |GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_6, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : LED_RED_1_Pin LED_YELLOW_1_Pin LED_GREEN_1_Pin LED_RED_2_Pin
-                           LED_YELLOW_2_Pin LED_GREEN_2_Pin EN0_Pin EN1_Pin
+  /*Configure GPIO pins : LED_RED_1_Pin LED_AMBER_1_Pin LED_GREEN_1_Pin LED_RED_2_Pin
+                           LED_AMBER_2_Pin LED_GREEN_2_Pin EN0_Pin EN1_Pin
                            EN2_Pin EN3_Pin */
-  GPIO_InitStruct.Pin = LED_RED_1_Pin|LED_YELLOW_1_Pin|LED_GREEN_1_Pin|LED_RED_2_Pin
-                          |LED_YELLOW_2_Pin|LED_GREEN_2_Pin|EN0_Pin|EN1_Pin
+  GPIO_InitStruct.Pin = LED_RED_1_Pin|LED_AMBER_1_Pin|LED_GREEN_1_Pin|LED_RED_2_Pin
+                          |LED_AMBER_2_Pin|LED_GREEN_2_Pin|EN0_Pin|EN1_Pin
                           |EN2_Pin|EN3_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
@@ -235,7 +237,8 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
-
+	timerRun1();
+	getKeyInput();
 }
 /* USER CODE END 4 */
 

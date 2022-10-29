@@ -12,6 +12,7 @@
 #include "main.h"
 
 int isButtonPressed(int button);
+int isButtonPressed1s(int button);
 
 void getKeyInput();
 

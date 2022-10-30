@@ -93,9 +93,51 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  int seg_index = 0;
+
+  setTimer(0, RED_time);
+  setTimer(1, GREEN_time);
+  setTimer(2, SEG_switching_time);
+  setTimer(3, LED_blinking_time);
+
   while (1)
   {
-	  fsmTrafficRun();
+	  	fsmTrafficRun();
+
+		if (isTimerUp(2)) {
+			// Turn off all 7seg LEDs
+			HAL_GPIO_WritePin(GPIOA, 0xF00, SEG_OFF);
+
+			if (seg_index >= 4) seg_index = 0;
+
+			switch (seg_index) {
+				case 0:
+					// Choose 1st 7seg to display
+					HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, SEG_ON);
+					break;
+				case 1:
+					// Choose 2nd 7seg to display
+					HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, SEG_ON);
+					break;
+				case 2:
+					// Choose 3rd 7seg to display
+					HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, SEG_ON);
+					break;
+				case 3:
+					// Choose 4th 7seg to display
+					HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, SEG_ON);
+					break;
+				default:
+					break;
+			}
+
+			// Display the 7seg LED
+			update7SEG(seg_index++);
+
+			// Set timer for switching
+			setTimer(2, SEG_switching_time);
+		}
+
 
     /* USER CODE END WHILE */
 

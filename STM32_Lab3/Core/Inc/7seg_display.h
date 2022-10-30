@@ -12,5 +12,6 @@
 #include "main.h"
 
 void update7SEG();
+void updateBufferForMode1();
 
 #endif /* INC_7SEG_DISPLAY_H_ */

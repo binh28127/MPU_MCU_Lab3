@@ -46,6 +46,9 @@
 #define AUTO_AMBER		19
 
 // define for 7seg LEDs
+#define SEG_ON			GPIO_PIN_RESET
+#define SEG_OFF			GPIO_PIN_SET
+
 #define horizontalRoad	0
 #define verticalRoad	1
 

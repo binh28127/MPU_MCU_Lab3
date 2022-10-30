@@ -11,6 +11,7 @@
 #include "button_reading.h"
 #include "software_timer.h"
 #include "fsm_traffic.h"
+#include "fsm_increasing_time.h"
 #include "7seg_display.h"
 #include "LEDs_display.h"
 
@@ -35,6 +36,10 @@
 #define MODE_2			10
 #define MODE_3			11
 #define MODE_4			12
+
+#define INC_RED			13
+#define INC_AMBER		14
+#define INC_GREEN		15
 
 // define for single LEDs
 #define LED_ON			GPIO_PIN_SET

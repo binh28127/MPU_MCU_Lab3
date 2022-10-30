@@ -1,6 +1,7 @@
 "./Core/Src/7seg_display.o"
 "./Core/Src/LEDs_display.o"
 "./Core/Src/button_reading.o"
+"./Core/Src/fsm_increasing_time.o"
 "./Core/Src/fsm_traffic.o"
 "./Core/Src/global.o"
 "./Core/Src/main.o"

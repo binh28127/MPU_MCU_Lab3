@@ -1,5 +1,5 @@
-Core/Src/software_timer.o: ../Core/Src/software_timer.c \
- ../Core/Inc/software_timer.h ../Core/Inc/global.h \
+Core/Src/fsm_increasing_time.o: ../Core/Src/fsm_increasing_time.c \
+ ../Core/Inc/fsm_increasing_time.h ../Core/Inc/global.h \
  ../Core/Inc/button_reading.h ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  ../Core/Inc/stm32f1xx_hal_conf.h \
@@ -29,7 +29,7 @@ Core/Src/software_timer.o: ../Core/Src/software_timer.c \
  ../Core/Inc/fsm_increasing_time.h ../Core/Inc/7seg_display.h \
  ../Core/Inc/LEDs_display.h
 
-../Core/Inc/software_timer.h:
+../Core/Inc/fsm_increasing_time.h:
 
 ../Core/Inc/global.h:
 

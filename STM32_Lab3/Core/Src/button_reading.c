@@ -8,7 +8,6 @@
 #include "button_reading.h"
 
 int button_flag[NO_OF_BUTTONS];
-int button_flag_1s[NO_OF_BUTTONS];
 GPIO_PinState key_reg[NO_OF_BUTTONS][4];
 int counterForKeyPress[NO_OF_BUTTONS];
 
@@ -18,10 +17,6 @@ int isButtonPressed(int button) {
 		return 1;
 	}
 	else return 0;
-}
-
-int isButtonPressed1s(int button) {
-	return (button_flag_1s[button] == 1);
 }
 
 void getKeyInput() {
@@ -47,7 +42,6 @@ void getKeyInput() {
 			// Press button, then release
 			if (key_reg[button][3] != key_reg[button][2]) {
 				key_reg[button][3] = key_reg[button][2];
-				button_flag_1s[button] = 0;
 
 				if (key_reg[button][2] == PRESSED_STATE) {
 					button_flag[button] = 1;
@@ -58,11 +52,7 @@ void getKeyInput() {
 			else {
 				counterForKeyPress[button]--;
 				if (!counterForKeyPress[button]) {
-					if (key_reg[button][2] == PRESSED_STATE) {
-						button_flag[button] = 1;
-						button_flag_1s[button] = 1;
-					}
-					counterForKeyPress[button] = timerForKeyPress / timerCycle;
+					key_reg[button][3] = NORMAL_STATE;
 				}
 			}
 		}

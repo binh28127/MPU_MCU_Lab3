@@ -8,6 +8,7 @@ C_SRCS += \
 ../Core/Src/7seg_display.c \
 ../Core/Src/LEDs_display.c \
 ../Core/Src/button_reading.c \
+../Core/Src/fsm_increasing_time.c \
 ../Core/Src/fsm_traffic.c \
 ../Core/Src/global.c \
 ../Core/Src/main.c \
@@ -22,6 +23,7 @@ OBJS += \
 ./Core/Src/7seg_display.o \
 ./Core/Src/LEDs_display.o \
 ./Core/Src/button_reading.o \
+./Core/Src/fsm_increasing_time.o \
 ./Core/Src/fsm_traffic.o \
 ./Core/Src/global.o \
 ./Core/Src/main.o \
@@ -36,6 +38,7 @@ C_DEPS += \
 ./Core/Src/7seg_display.d \
 ./Core/Src/LEDs_display.d \
 ./Core/Src/button_reading.d \
+./Core/Src/fsm_increasing_time.d \
 ./Core/Src/fsm_traffic.d \
 ./Core/Src/global.d \
 ./Core/Src/main.d \

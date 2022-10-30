@@ -103,6 +103,7 @@ int main(void)
   while (1)
   {
 	  	fsmTrafficRun();
+	  	fsmIncTimeRun();
 
 		if (isTimerUp(2)) {
 			// Turn off all 7seg LEDs

@@ -13,5 +13,6 @@
 
 void update7SEG();
 void updateBufferForMode1();
+void updateBufferForIncTime();
 
 #endif /* INC_7SEG_DISPLAY_H_ */

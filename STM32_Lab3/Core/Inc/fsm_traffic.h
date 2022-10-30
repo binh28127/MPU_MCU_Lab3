@@ -11,6 +11,8 @@
 #include "global.h"
 #include "main.h"
 
+extern int time_count;
+
 void fsmTrafficRun();
 
 #endif /* INC_FSM_TRAFFIC_H_ */

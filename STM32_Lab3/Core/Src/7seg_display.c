@@ -91,4 +91,35 @@ void updateBufferForMode1() {
 	led_buffer[3] = (currentCounter(1) / 100) % 10;
 }
 
+void updateBufferForIncTime() {
+	// 2 7seg LEDs to display the value
+	led_buffer[0] = time_count / 10;
+	led_buffer[1] = time_count % 10;
+
+	// 2 7seg LEDs to display the mode
+	led_buffer[2] = 0;
+	switch (mode) {
+		case MODE_2:
+			led_buffer[3] = 2;
+			break;
+		case MODE_3:
+			led_buffer[3] = 3;
+			break;
+		case MODE_4:
+			led_buffer[3] = 4;
+			break;
+		case INC_RED:
+			led_buffer[3] = 2;
+			break;
+		case INC_AMBER:
+			led_buffer[3] = 3;
+			break;
+		case INC_GREEN:
+			led_buffer[3] = 4;
+			break;
+		default:
+			break;
+	}
+}
+
 #endif /* SRC_7SEG_DISPLAY_C_ */

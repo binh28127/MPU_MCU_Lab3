@@ -10,9 +10,9 @@
 
 #include "global.h"
 
-extern int timer1_flag;
-
-void setTimer1(int duration);
-void timerRun1();
+int currentCounter(int timer);
+int isTimerUp(int timer);
+void setTimer(int timer, int duration);
+void timerRun();
 
 #endif /* INC_SOFTWARE_TIMER_H_ */

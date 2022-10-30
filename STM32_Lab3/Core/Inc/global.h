@@ -36,6 +36,10 @@
 #define MODE_3			11
 #define MODE_4			12
 
+#define INC_RED			13
+#define INC_AMBER		14
+#define INC_GREEN		15
+
 // define for single LEDs
 #define LED_ON			GPIO_PIN_SET
 #define LED_OFF			GPIO_PIN_RESET
@@ -46,6 +50,9 @@
 #define AUTO_AMBER		19
 
 // define for 7seg LEDs
+#define SEG_ON			GPIO_PIN_RESET
+#define SEG_OFF			GPIO_PIN_SET
+
 #define horizontalRoad	0
 #define verticalRoad	1
 

@@ -1,3 +1,2 @@
 7seg_display.c:17:6:display7SEG	16	static
 7seg_display.c:64:6:update7SEG	16	static
-7seg_display.c:87:6:updateBufferForMode1	8	static

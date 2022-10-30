@@ -1,4 +1,2 @@
 LEDs_display.c:14:6:fsmHorLEDsRun	8	static
 LEDs_display.c:47:6:fsmVerLEDsRun	8	static
-LEDs_display.c:80:6:LEDsDisplay	8	static
-LEDs_display.c:131:6:LEDsBlinking	8	static

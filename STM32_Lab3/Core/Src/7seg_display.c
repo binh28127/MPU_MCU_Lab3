@@ -84,11 +84,4 @@ void update7SEG(int index){
     }
 }
 
-void updateBufferForMode1() {
-	led_buffer[0] = currentCounter(0) / 100;
-	led_buffer[1] = (currentCounter(0) / 10) % 10;
-	led_buffer[2] = currentCounter(1) / 100;
-	led_buffer[3] = (currentCounter(1) / 10) % 10;
-}
-
 #endif /* SRC_7SEG_DISPLAY_C_ */

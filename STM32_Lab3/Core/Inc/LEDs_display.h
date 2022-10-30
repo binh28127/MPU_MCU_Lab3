@@ -11,7 +11,6 @@
 #include "global.h"
 #include "main.h"
 
-void LEDsDisplay();
-void LEDsBlinking();
+
 
 #endif /* INC_LEDS_DISPLAY_H_ */

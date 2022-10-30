@@ -31,25 +31,25 @@ void fsmTrafficRun() {
 			if (isButtonPressed(BUTTON_1)) {
 				mode = MODE_4;
 			}
-
-			// LEDs blinking
-			LEDsBlinking();
-
-			// Update time for 7seg LEDs
-			time_count = AMBER_time / 1000;
-			updateBufferForIncTime();
-
-			if (isButtonPressed(BUTTON_2)) {
-				mode = INC_AMBER;
-				time_count++;
-			}
-
 			break;
 
 		case MODE_4:
 			if (isButtonPressed(BUTTON_1)) {
 				mode = MODE_1;
 			}
+
+			// LEDs blinking
+			LEDsBlinking();
+
+			// Update time for 7seg LEDs
+			time_count = GREEN_time / 1000;
+			updateBufferForIncTime();
+
+			if (isButtonPressed(BUTTON_2)) {
+				mode = INC_GREEN;
+				time_count++;
+			}
+
 			break;
 
 		default:

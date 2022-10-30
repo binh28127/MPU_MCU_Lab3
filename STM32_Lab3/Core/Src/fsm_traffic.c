@@ -19,18 +19,51 @@ void fsmTrafficRun() {
 			if (isButtonPressed(BUTTON_1)) {
 				mode = MODE_2;
 			}
+
+			// Run traffic single LEDs normally
+			LEDsDisplay();
+
+			// Update time for 7seg LEDs
+			updateBufferForMode1();
+
 			break;
 
 		case MODE_2:
 			if (isButtonPressed(BUTTON_1)) {
 				mode = MODE_3;
 			}
+
+			// LEDs blinking
+			LEDsBlinking();
+
+			// Update time for 7seg LEDs
+			time_count = RED_time / 1000;
+			updateBufferForIncTime();
+
+			if (isButtonPressed(BUTTON_2)) {
+				mode = INC_RED;
+				time_count++;
+			}
+
 			break;
 
 		case MODE_3:
 			if (isButtonPressed(BUTTON_1)) {
 				mode = MODE_4;
 			}
+
+			// LEDs blinking
+			LEDsBlinking();
+
+			// Update time for 7seg LEDs
+			time_count = AMBER_time / 1000;
+			updateBufferForIncTime();
+
+			if (isButtonPressed(BUTTON_2)) {
+				mode = INC_AMBER;
+				time_count++;
+			}
+
 			break;
 
 		case MODE_4:

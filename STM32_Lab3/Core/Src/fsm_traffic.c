@@ -33,6 +33,7 @@ void fsmTrafficRun() {
 			time_count = RED_time / 1000;
 			updateBufferForIncTime();
 
+			// Increase the RED_time when press the 2nd button
 			if (isButtonPressed(BUTTON_2)) {
 				mode = INC_RED;
 				time_count++;

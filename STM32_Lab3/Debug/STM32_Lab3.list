@@ -903,6 +903,7 @@ void fsmTrafficRun() {
 			updateBufferForIncTime();
  800069e:	f7ff fe1b 	bl	80002d8 <updateBufferForIncTime>
 
+			// Increase the RED_time when press the 2nd button
 			if (isButtonPressed(BUTTON_2)) {
  80006a2:	2001      	movs	r0, #1
  80006a4:	f7ff fe98 	bl	80003d8 <isButtonPressed>

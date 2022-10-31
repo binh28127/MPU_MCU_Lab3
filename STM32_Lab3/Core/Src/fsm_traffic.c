@@ -40,6 +40,7 @@ void fsmTrafficRun() {
 			time_count = RED_time / 1000;
 			updateBufferForIncTime();
 
+			// 2nd button is pressed, increase the time duration value of the red LEDs
 			if (isButtonPressed(BUTTON_2)) {
 				mode = INC_RED;
 				time_count++;
@@ -59,6 +60,7 @@ void fsmTrafficRun() {
 			time_count = AMBER_time / 1000;
 			updateBufferForIncTime();
 
+			// 2nd button is pressed, increase the time duration value of the amber LEDs
 			if (isButtonPressed(BUTTON_2)) {
 				mode = INC_AMBER;
 				time_count++;
@@ -78,6 +80,7 @@ void fsmTrafficRun() {
 			time_count = GREEN_time / 1000;
 			updateBufferForIncTime();
 
+			// 2nd button is pressed, increase the time duration value of the green LEDs
 			if (isButtonPressed(BUTTON_2)) {
 				mode = INC_GREEN;
 				time_count++;

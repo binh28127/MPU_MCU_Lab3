@@ -1487,6 +1487,7 @@ void fsmTrafficRun() {
 			updateBufferForIncTime();
  8000a9e:	f7ff fc6d 	bl	800037c <updateBufferForIncTime>
 
+			// 2nd button is pressed, increase the time duration value of the red LEDs
 			if (isButtonPressed(BUTTON_2)) {
  8000aa2:	2001      	movs	r0, #1
  8000aa4:	f7ff fe2c 	bl	8000700 <isButtonPressed>
@@ -1539,6 +1540,7 @@ void fsmTrafficRun() {
 			updateBufferForIncTime();
  8000aea:	f7ff fc47 	bl	800037c <updateBufferForIncTime>
 
+			// 2nd button is pressed, increase the time duration value of the amber LEDs
 			if (isButtonPressed(BUTTON_2)) {
  8000aee:	2001      	movs	r0, #1
  8000af0:	f7ff fe06 	bl	8000700 <isButtonPressed>
@@ -1591,6 +1593,7 @@ void fsmTrafficRun() {
 			updateBufferForIncTime();
  8000b36:	f7ff fc21 	bl	800037c <updateBufferForIncTime>
 
+			// 2nd button is pressed, increase the time duration value of the green LEDs
 			if (isButtonPressed(BUTTON_2)) {
  8000b3a:	2001      	movs	r0, #1
  8000b3c:	f7ff fde0 	bl	8000700 <isButtonPressed>

@@ -918,6 +918,7 @@ void fsmTrafficRun() {
 			updateBufferForIncTime();
  80006b2:	f7ff fe11 	bl	80002d8 <updateBufferForIncTime>
 
+			// Increase the AMBER_time when press the 2nd button
 			if (isButtonPressed(BUTTON_2)) {
  80006b6:	2001      	movs	r0, #1
  80006b8:	f7ff fe8e 	bl	80003d8 <isButtonPressed>

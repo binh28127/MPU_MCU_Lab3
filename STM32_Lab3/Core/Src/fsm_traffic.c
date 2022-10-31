@@ -39,6 +39,7 @@ void fsmTrafficRun() {
 			time_count = AMBER_time / 1000;
 			updateBufferForIncTime();
 
+			// Increase the AMBER_time when press the 2nd button
 			if (isButtonPressed(BUTTON_2)) {
 				mode = INC_AMBER;
 				time_count++;

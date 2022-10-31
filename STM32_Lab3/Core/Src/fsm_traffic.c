@@ -45,6 +45,7 @@ void fsmTrafficRun() {
 			time_count = GREEN_time / 1000;
 			updateBufferForIncTime();
 
+			// 2nd button is pressed, increase the time duration value of the green LEDs
 			if (isButtonPressed(BUTTON_2)) {
 				mode = INC_GREEN;
 				time_count++;

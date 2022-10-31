@@ -933,6 +933,7 @@ void fsmTrafficRun() {
 			updateBufferForIncTime();
  80006c6:	f7ff fe07 	bl	80002d8 <updateBufferForIncTime>
 
+			// 2nd button is pressed, increase the time duration value of the green LEDs
 			if (isButtonPressed(BUTTON_2)) {
  80006ca:	2001      	movs	r0, #1
  80006cc:	f7ff fe84 	bl	80003d8 <isButtonPressed>
